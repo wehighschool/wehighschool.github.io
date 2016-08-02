@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Opportunities</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Playball|Shadows+Into+Light+Two|Special+Elite' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">weHighschool</a>
+            </div>
+		
+ <ul class="nav navbar-nav">
+                    <li><a href="#section1">Home</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation Pathway<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Freshmen</a></li>
+                            <li><a href="#">Sophmores</a></li>
+                            <li><a href="#">Juniors</a></li>
+                            <li><a href="#">Seniors</a></li>
+                        </ul>
+                    </li>           
+                    <li><a href="#section3">Scholarships</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SAT/ACT<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">What is the SAT & ACT?</a></li>
+                            <li><a href="#">Calendar</a></li>
+                            <li><a href="#">More Information</a></li>
+                        </ul>
+                    </li>    
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Surviving High School<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Study Tips</a></li>
+                            <li><a href="#">Self Care</a></li>
+                            <li><a href="#">Writing Essays</a></li>
+                            <li><a href="#">Miscellaneous</a></li>
+                        </ul>
+                    </li>    
+                    <li><a href="http://wehighschool.com/opportunities-for-you/">Internships</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">LOGIN<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                                 <script>
+                                  function onSignIn(googleUser) {
+                                    // Useful data for your client-side scripts:
+                                    var profile = googleUser.getBasicProfile();
+                                    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                                    console.log('Full Name: ' + profile.getName());
+                                    console.log('Given Name: ' + profile.getGivenName());
+                                    console.log("Email: " + profile.getEmail());
+
+                                    // The ID token you need to pass to your backend:
+                                    var id_token = googleUser.getAuthResponse().id_token;
+                                    console.log("ID Token: " + id_token);
+                                  };
+                                </script>
+                                 
+   
+                            </li>
+                            
+    </div>
+</nav>
+<img src="study3.jpg" width="100%"height="700px" title="Credits: http://sfstudy.tumblr.com/post/141230723595/school-supplies-and-coffee"/>
+
+
+
+
+<div id="everything">
+  
+<h1 class="one">SAT/ACT Resources </h1>
+
+<div class="container">
+ <div class="col-lg-12" id="content">
+    
+    <div class="container-fluid" id="content">
+        <div class="col-lg-2" id="leftside">
+            <h1>Nav_area</h1>
+        </div>
+        
+        <div id="mainbody" class="col-lg-8">
+            <h1> Scholarships </h1>
+            <div class="col-lg-12" id="section1">
+                <img class="mySlides" src="sch.jpg" style="display:block; margin:auto; width: 100%; height: 300px">
+                <img class="mySlides" src="scholarships.jpg" style="display:block; margin:auto; width: 100%; height:300px">
+                <img class="mySlides" src="apply.jpg" style="display:block; margin:auto; width: 100%; height: 300px">
+            </div>
+            <script>
+                var myIndex = 0;
+                carousel();
+                function carousel(){
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i=0; i < x.length; i++){
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}
+                        x[myIndex-1].style.display = "block";
+                        setTimeout(carousel, 2000);
+                }
+            </script>
+            
+            <div id="info">
+            
+            <!-- Websites links start point-->
+                <h3><br> Websites with Millions of Scholarships <br></h3>
+                <h4><a href="https://www.scholarships.com/"> <br>Scholarships.com<br></a></h4>
+                <p><b> College is expensive.</b></p>
+                <p><b>Scholarships.com makes paying for it easier.</b></p>
+                <p>Whether you are in high school, enrolled in college or a returning student,
+                    Scholarships.com will search millions of scholarships & grants to match you with scholarships, grants and other financial aid that fits you perfectly.
+                </p>
+                
+                <h4><a href="http://www.fastweb.com/"> Fastweb</a> </h4>
+                <p><b>Join and match instantly.</b></p>
+                <p> Once you complete your profile you'll have access to our database of more than 1.5 million scholarships. 
+                    That's $3.4 billion dollars in funding - all available to students like you!</p>
+                <p> We've made it simple to keep track of your scholarship search. 
+                    You can indicate which scholarships you'd like to apply for, which you're not interested in and those you've already completed.
+                </p>
+                
+                <h4><a href="https://colleges.niche.com/scholarships/">Niche</a></h4>
+                <p><b>Find College Scholarships</b></p>
+                <p> Paying for college is hard, but finding scholarships doesn't have to be. 
+                    Browse through these scholarships, or choose from the categories on the left to get started. 
+                    To make it even easier, you can register to get personally matched to scholarships you are eligible to apply for.
+                </p>
+                   
+                <h4><a href="https://scholarshipowl.com/">ScholarshipsOwl</a></h4>
+                <p><b>Scholarships Just Got a Hooo-le Lot Easier</b></p>
+                <p> ScholarshipOwl is your source of relief from the dreaded application process. 
+                    We put students on the fast-track to success by providing direct access to the scholarships they need the most. 
+                    Take the hassle out of financial aid and maximize your chance at a free ride in college. 
+                    No matter how much funding you need for school, we have the opportunities you're looking for.
+                </p>
+                
+                <h4><a href="https://www.unigo.com/scholarships/match">Unigo</a><h4>
+                <p><b>Finding scholarships is hard. We feel you.</b></p>
+                <p style="font-size: 14px">Looking for specific scholarships? Browse our Scholarship Directory to view scholarships by category.</p>
+            <!-- End of websites --> 
+                
+            <!-- the start of scholarships with descriptions and requirements -->    
+                <h3><br>Big Scholarships<br></h3>
+                <h4><a href="https://www.possefoundation.org/about-posse"><br>Posse </a></h4>
+                <p> Founded in 1989, Posse identifies public high school students with extraordinary academic and leadership potential who may be overlooked by traditional college selection processes. 
+                    Posse extends to these students the opportunity to pursue personal and academic excellence by placing them in supportive, multicultural teams—Posses—of 10 students. 
+                    Posse partner colleges and universities award Posse Scholars four-year, full-tuition leadership scholarships.
+                </p>
+                <p><b>Amount:</b> Covers full tuition</p>
+                <h5><b>Requirements:</b><h5>
+                <ol>
+                    <li><b>Be nominated</b> by their high school or a community-based organization.</li>
+                    <li><b>Be in the first term of their senior year in high school.</b>
+                        Depending on the Posse city, nominations are often taken between the spring and early August before the new school year begins.
+                    </li>
+                    <li><b>Demonstrate leadership</b> within their high school, community or family.</p>
+                    <li><b>Demonstrate academic potential.</b></li>
+                </ol>
+                
+                <h4><a href="https://www.questbridge.org/about/mission-and-vision">QuestBridge</a></h4>
+                <p> QuestBridge is a powerful platform that connects the nation's brightest students from low-income backgrounds with leading institutions of higher education and further opportunities. 
+                    We are an aggregator of excellence. By facilitating these exchanges, QuestBridge aims to increase the percentage of talented low-income students attending the nation's best universities and the ranks of national leadership itself.
+                </p>
+                <p><b>Amount:</b> Covers full tuition</p>
+                <h5><b>What They're Looking For:</b></h5>
+                <h5><b>Academic Achievement:</b></h5>
+                <ul>
+                    <li>Students in the top 5% or 10% of their class.</li>
+                    <li>Have received mostly A’s grades in the most rigorous classes available. (AP's, IB's, Honors, etc.)</li>
+                    <li>Scored > 1250 (Critical Reading +Math) on the SAT or > 27 (Composite) on the ACT.</li>
+                </ul>
+                <h5><b>Financial Qualification:</b></h5>
+                <ul>
+                    <li>Household income is less than $65,000 a year, and often less for a typical family of four, with minimal assets.</li>
+                    <li>Eligible for free or reduced-price lunch.</li>
+                </ul>
+                <h5><b>Personal Circumstances:</b></h5>
+                <ul>
+                    <li>First generation in their family to attend a four-year U.S. college.</li>
+                    <li>Unusually high level of family responsibility (caring for siblings, part-time work to support family financially, etc.)</li>
+                    <li>Extracurricular achievements, such as leadership or community activities.</li>
+                </ul>
+                
+                
+                <h4><a href="http://www.coca-colascholarsfoundation.org/applicants/#programs"> The Coca-Cola Scholars Program Scholarship </a></h4>
+                <p> An achievement-based scholarship awarded to graduating high school seniors each year. 
+                    Students are recognized for their capacity to lead and serve, and their commitment to making a significant impact on their schools and communities.
+                </p>
+                <p><b>Amount:</b> $20,000</p>
+                <h5><b> Eligibilty Requirements: </b></h5>
+                <ul>
+                    <li>Current high school (or home-schooled) seniors attending school in the United States (or select DoD schools)</li>
+                    <li>U.S. Citizens, U.S. Nationals, U.S. Permanent Residents, Refugees, Asylees, Cuban-Haitian Entrants, or Humanitarian Parolees</li>
+                    <li>Anticipating completion of high school diploma at the time of application</li>
+                    <li>Planning to pursue a degree at an accredited U.S. post-secondary institution</li>
+                    <li>Carrying a minimum 3.00 GPA at the end of their junior year of high school</li>
+                </ul>
+                
+                <h4><a href="http://buickachievers.com/">Buick Achievers Scholarships Program</a></h4>
+                <p><b>It starts with good grades. But goes beyond.</b></p>
+                <p> The Buick Achievers Scholarship Program rewards students who have succeeded both inside and outside of the classroom – and who may not be able to attend college without financial assistance. 
+                    It’s a reward for what you’ve made of yourself and the difference you are making for others.</p>
+                <h5><b>Applicant Qualifications:</b></h5>    
+                <ul>
+                    <li>Be high school seniors, high school graduates, or current postsecondary undergraduate students.</li>
+                    <li>Plan to enroll in full-time undergraduate study at an accredited four-year college or university based in the U.S. or Puerto Rico. Proprietary and online schools are not eligible.</li>
+                    <li>Plan to major in a specified course of study that focuses on Engineering, Technology, Design or other programs of study related to the automotive industry.</li>
+                    <li>Demonstrate an interest in pursuing a career in the automotive or related industries using these areas of study.</li>
+                    <li>Be U.S. citizens and have permanent residence in the United States or Puerto Rico.</li>
+                </ul>
+                    
+            <!-- end of big scholarships -->
+                
+                
+                
+            </div>
+        </div>
+    
+        <div class="col-lg-2" id="righside">
+            <h1> sign_up_area </h1>
+        </div>
+    
+            
+    </div>    
+    
+    <footer>
+        <p> NO STUDENTS LEFT BEHIND </p>
+        <p> Contact Information: </p>
+        <p><a href="mailto: WeHighchool@gmail">WeHighchool@gmail.com</a></p>
+    </footer>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title> weHighSchool</title>
+  <title> Surviving HighSchool</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -16,48 +16,67 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">weHighschool</a>
+            </div>
+		
+                <ul class="nav navbar-nav">
+                    <li><a href="#section1">Home</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation Pathway<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Freshmen</a></li>
+                            <li><a href="#">Sophmores</a></li>
+                            <li><a href="#">Juniors</a></li>
+                            <li><a href="#">Seniors</a></li>
+                        </ul>
+                    </li>           
+                    <li><a href="#section3">Scholarships</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SAT/ACT<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">What is the SAT & ACT?</a></li>
+                            <li><a href="#">Calendar</a></li>
+                            <li><a href="#">More Information</a></li>
+                        </ul>
+                    </li>    
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Surviving High School<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Study Tips</a></li>
+                            <li><a href="#">Self Care</a></li>
+                            <li><a href="#">Writing Essays</a></li>
+                            <li><a href="#">Miscellaneous</a></li>
+                        </ul>
+                    </li>    
+                    <li><a href="http://wehighschool.com/opportunities-for-you/">Internships</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">LOGIN<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                                 <script>
+                                  function onSignIn(googleUser) {
+                                    // Useful data for your client-side scripts:
+                                    var profile = googleUser.getBasicProfile();
+                                    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                                    console.log('Full Name: ' + profile.getName());
+                                    console.log('Given Name: ' + profile.getGivenName());
+                                    console.log("Email: " + profile.getEmail());
 
-
-<nav class="navbar navbar-inverse navbar-fixed-top ">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">weHighSchool</a>
+                                    // The ID token you need to pass to your backend:
+                                    var id_token = googleUser.getAuthResponse().id_token;
+                                    console.log("ID Token: " + id_token);
+                                  };
+                                </script>
+                                 
+   
+                            </li>
+                           
     </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right ">
-          <li><a href="#section1">Home</a></li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation Pathway<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-              <li><a href="#section41">Freshmen</a></li>
-              <li><a href="#section42">Sophmores</a></li>
-              <li><a href="#section42">Juniors</a></li>
-              <li><a href="#section42">Seniors</a></li>
-            </ul>
-          <li><a href="#section3">Scholarships</a></li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SAT/ACT<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#section41">What is the SAT & ACT?</a></li>
-              <li><a href="#section42">Calendar</a></li>
-              <li><a href="#section42">More Information</a></li>
-            </ul>
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Surviving High School<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#section41">Study Tips</a></li>
-              <li><a href="#section42">Self Care</a></li>
-              <li><a href="#section42">Writing Essays</a></li>
-              <li><a href="#section42">Miscellaneous</a></li>
-            </ul>
-        </li>
-      </ul>
-      </div>
-    </div>
-  </div>
 </nav>
 <img src="study3.jpg" width="100%"height="700px" title="Credits: http://sfstudy.tumblr.com/post/141230723595/school-supplies-and-coffee"/>
 <div id="everything">
@@ -218,12 +237,13 @@
     </div>
 
   </div>
+
 <footer class="footer">
     <p>NO STUDENTS LEFT BEHIND</p>
     <p>Contact Information:
       <a href="mailto:wehighschool@gmail.com">wehighschool@gmail.com</a>
     </p>
 </footer>
-  </div>
+ </div>
 </body>
 </html>
