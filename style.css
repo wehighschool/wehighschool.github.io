@@ -115,7 +115,7 @@ h1{
     width: 100%;
     line-height: 68px;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     background-color: #fff;
     color: #313131;
     transition: 500ms;
@@ -290,3 +290,29 @@ h3{
 }
 
 /*END SCHOLARSHIPS*/
+
+
+/*PATHWAY*/
+.pathway{
+  list-style-type: none;
+  padding: 20px;
+}
+.pathway li h3{
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+.mini-pathway li{
+  list-style-type: disc;
+
+}
+.mini-pathway p{
+  font-style: italic;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+/*END PATHWAY*/
