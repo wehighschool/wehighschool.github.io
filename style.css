@@ -317,6 +317,7 @@ h3{
 }
 /*END PATHWAY*/
 
+<<<<<<< HEAD
 /*SURVIVING*/
 .study{
 
@@ -348,3 +349,18 @@ h3{
   list-style-type: disc;
 }
 /*END SURVIVING*/
+=======
+h2{
+  text-align: center;
+  font-size:25pt;
+}
+
+h3{
+  text-align:center;
+  font-size:23pt;
+}
+
+li.listz {
+  font-size:21pt;
+}
+>>>>>>> origin/master

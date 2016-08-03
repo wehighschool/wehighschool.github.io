@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SAT/ACT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playball|Shadows+Into+Light+Two|Special+Elite' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="846875914565-5hh5sffmd46lbktj2p1nqgk8ligo4um9.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" >
+
+    <style>
+
+        * {box-sizing:border-box;}
+        ul {list-style-type: none;}
+        body {font-family: Verdana,sans-serif;}
+
+        .month {
+            padding: 70px 25px;
+            width: 100%;
+            background: #1abc9c;
+        }
+
+        .month ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .month ul li {
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .month .prev {
+            float: left;
+            padding-top: 10px;
+        }
+
+        .month .next {
+            float: right;
+            padding-top: 10px;
+        }
+
+        .weekdays {
+            margin: 0;
+            padding: 10px 0;
+            background-color: #ddd;
+        }
+
+        .weekdays li {
+            display: inline-block;
+            width: 13.6%;
+            color: #666;
+            text-align: center;
+        }
+
+        .days {
+            padding: 10px 0;
+            background: #eee;
+            margin: 0;
+        }
+
+        .days li {
+            list-style-type: none;
+            display: inline-block;
+            width: 13.6%;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size:12px;
+            color: #777;
+        }
+
+        .days li .active {
+            padding: 5px;
+            background: #1abc9c;
+            color: white !important
+        }
+
+        /* Add media queries for smaller screens */
+        @media screen and (max-width:720px) {
+            .weekdays li, .days li {width: 13.1%;}
+        }
+
+        @media screen and (max-width: 420px) {
+            .weekdays li, .days li {width: 12.5%;}
+            .days li .active {padding: 2px;}
+        }
+
+        @media screen and (max-width: 290px) {
+            .weekdays li, .days li {width: 12.2%;}
+        }
+    </style>
+
+    <script>
+        var months=["August 2016", " September 2016", "October 2016", "November 2016", "December 2016", "January 2016", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017"];
+
+        var calendar = 0;
+
+        function nextbutton(){
+            var text = document.getElementById("month");
+            calendar = calendar + 1;
+            text.innerHTML = months[calendar];
+        }
+    </script>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+  <!--NAVBAR-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">WeHighschool</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="#section1">Home</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation Pathway<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Freshmen</a></li>
+                        <li><a href="#">Sophmores</a></li>
+                        <li><a href="#">Juniors</a></li>
+                        <li><a href="#">Seniors</a></li>
+                    </ul>
+                </li>
+                <li><a href="#section3">Scholarships</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SAT/ACT<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">What is the SAT & ACT?</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">More Information</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Surviving High School<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Study Tips</a></li>
+                        <li><a href="#">Self Care</a></li>
+                        <li><a href="#">Writing Essays</a></li>
+                        <li><a href="#">Miscellaneous</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://wehighschool.com/opportunities-for-you/">Internships</a></li>
+            </ul>
+        </div>
+    </nav>
+  <!--NAVBAR END-->
+  <img class="home" src="testing.jpg" width="100%"height="700px"/>
+
+
+    <div id="everything"> <!-- everything -->
+
+        <h1 id="motto">No Students Left Behind</h1>
+
+        <div class="month">
+            <ul>
+                <button class="ui-btn" id="previous">❮</button>
+                <button class="ui-btn" id="next" onclick="nextbutton()">❯</button>
+
+                <li style="text-align:center" id="month">
+                    August<br>
+                    <span style="font-size:18px">2016</span>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+        </ul>
+
+
+        <ul class="days">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li><span class="active">22</span></li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+        </ul>
+
+        <div class="col-lg-3" id="sidebar">
+            <div>
+                <h2>For more information..</h2>
+                <ul>
+                    <li><a href="https://www.higherscorestestprep.com/act-prep/">ACT Prep</a></li>
+                    <li><a href="https://www.higherscorestestprep.com/new-sat/">SAT Prep</a></li>
+                    <li><a href="https://www.khanacademy.org/test-prep/sat">Khan Academy</a></li>
+                    <li><a href="https://www.hsalaredo.org/highschool/SAT-ACT%20Fact%20Sheet.pdf">The SAT/ACT fact sheet</a></li>
+                    <li><a href="https://collegereadiness.collegeboard.org/sat/register/dates-deadlines">Registration for SAT</a></li>
+                    <li><a href="http://www.act.org/content/act/en/products-and-services/the-act.html">Registration for ACT</a></li>
+                </ul>
+            </div>
+
+            <div>
+            </div>
+
+            <div>
+            </div>
+        </div>
+
+        <div class="col-lg-8" id="content"> <!-- content -->
+
+            <h3><ins>What is the SAT & ACT?</h3></ins>
+            <h4><ins>The SAT</h4></ins>
+            <li>The SAT is a test of a student's academic skills, used for admission to US colleges.</li>
+            <li>This exam consists of seven sections: three verbal reasoning, three mathematical reasoning, and one varible section (of either type) that is not graded. Each subject is divided into two,30-minute sections and one, 15-minute section. The varible section consists of one, 30-minute section.</li>
+            <li>The maximum possible combined score for the exam is 1600, 800 verbal and 800 mathematics.</li>
+
+            <h5><b><ins>The ACT</h5></b></ins>
+            <li>The ACT  is a national college admissions examination that consists of subject area tests in: English, Mathematics, Reading, and Science.</li>
+            <li>This exam consists of 215 multiple-choice questions.</li>
+            <li>The maximum possible score is 36.</li>
+
+            <h6><b><ins>How do the SAT & ACT differ?</h6></b></ins>
+            <li>They are administered by different organizations. The College Board administers the SAT while ACT, Inc. andministers the ACT.</li>
+            <li>The ACT contains only multiple-choice questions, while the SAT contains some mathematical questions requiring students to generate their own responses.</li>
+            <li>The SAT tests general verbal and mathematical reasoning skills while the ACT is more closely tied with highschool curricula.</li>
+
+            <h6><b><ins>ACT TIP SHEET</h6></b></ins>
+            <li>Familiarize yourself with the content of the ACT exam:</li>
+            <ol type="1">
+                <li>English</li>
+                <li>Reading</li>
+                <li>Mathematics</li>
+                <li>Science</li>
+            </ol>
+            <li>Take the PLAN exam. This exam mirrors the ACT and provides a good practice experience to better prepare you for the ACT.</li>
+
+            <h6><b><ins>SAT TIP SHEET</h6></b></ins>
+            <li>go to collegeboard.org, which contains alot of information and practice test.</li>
+            <ol type="1">
+                <li>PSAT</li>
+                <p>Taking the PSAT as a Sophmore or Junior is a good way to practice and get feedback as you start planning for college and prepare for the SAT.</p>
+                <li>Study the test directions for each question type ahead of time.</li>
+                <p>Use the time you save to answer your questions, look over your answer sheet beforehand as well.</p>
+                <li>Answer easy questions first</li>
+                <p>You earn just as many points for an easy question as you do for a hard question. Questions of the same type are grouped together.</p>
+                <li>Know how the test is scored</li>
+                <p> On the multiple-choice questions, you earn one point for each correct answer and lose a fraction of a point for a wrong answer, but you don’t gain or lose points if you do not answer a question. You don’t have to answer every question correctly.</p>
+                <li>Guess Smart</li>
+                <p>If you can rule out one or more answer choices for a multiple-choice question as definitely wrong,your chances of guessing the right answer improve. For math questions without answer choices, fill in your best guess since no points are subtracted for wrong answers as they are in all the other question types.</p>
+            </ol>
+            <li>Publications</li>
+            <ol type="1">
+                <li>Taking the SAT I:reasoning test</li>
+                <li>10 real SATs</li>
+            </ol>
+            <li>Online resources</li>
+            <ol type="1">
+                <li>Practice Questions</li>
+                <li>Mini-SAT</li>
+                <li>SAT preppacks</li>
+            </ol>
+        </div> <!-- /content -->
+
+        <footer class="footer">
+            <p>NO STUDENTS LEFT BEHIND</p>
+            <p>Contant Information:
+                <a href="mailto:wehighschool@gmail.com">wehighschool@gmail.com</a>
+            </p>
+            <p>WeHighschool - &copy;</p>
+        </footer>
+    </div> <!-- everything -->
+<!-- <h9>Sat booklet</h9> -->
+<!--<img src="satbook.jpg" alt="SAT BOOK" style="width:379px;height:499;"> -->
+</body>
