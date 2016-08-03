@@ -13,6 +13,103 @@
   <link href='https://fonts.googleapis.com/css?family=Playball|Shadows+Into+pght+Two|Special+Epte' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style>
+
+      * {box-sizing:border-box;}
+      ul {list-style-type: none;}
+      body {font-family: Verdana,sans-serif;}
+
+      .month {
+          padding: 70px 30px;
+          width: 100%;
+          background: #1abc9c;
+      }
+
+      .month ul {
+          margin: 0;
+          padding: 0;
+      }
+
+      .month ul li {
+          color: white;
+          font-size: 20px;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+      }
+
+      .month .prev {
+          float: left;
+          padding-top: 10px;
+      }
+
+      .month .next {
+          float: right;
+          padding-top: 10px;
+      }
+
+      .weekdays {
+          margin: 0;
+          padding: 10px 0;
+          background-color: #ddd;
+      }
+
+      .weekdays li {
+          display: inline-block;
+          width: 13.6%;
+          color: #666;
+          text-align: center;
+      }
+
+      .days {
+          padding: 30px;
+          background: #eee;
+
+      }
+
+      .days li {
+          list-style-type: none;
+          display: inline-block;
+          width: 13.6%;
+          text-align: center;
+          margin-bottom: 5px;
+          font-size:12px;
+          color: #777;
+      }
+
+      .days li .active {
+          padding: 5px;
+          background: #1abc9c;
+          color: white !important
+      }
+
+      /* Add media queries for smaller screens */
+      @media screen and (max-width:720px) {
+          .weekdays li, .days li {width: 13.1%;}
+      }
+
+      @media screen and (max-width: 420px) {
+          .weekdays li, .days li {width: 12.5%;}
+          .days li .active {padding: 2px;}
+      }
+
+      @media screen and (max-width: 290px) {
+          .weekdays li, .days li {width: 12.2%;}
+      }
+  </style>
+
+  <script>
+      var months=["August 2016", " September 2016", "October 2016", "November 2016", "December 2016", "January 2016", "February 2017", "March 2017", "April 2017", "May 2017", "June 2017"];
+
+      var calendar = 0;
+
+      function nextbutton(){
+          var text = document.getElementById("month");
+          calendar = calendar + 1;
+          text.innerHTML = months[calendar];
+      }
+  </script>
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -66,19 +163,74 @@
 <div id="everything">
 
     <h1 class="one">SAT/ACT Resources </h1>
+    <div class="month">
+        <ul>
+            <button class="ui-btn" id="previous">❮</button>
+            <button class="ui-btn" id="next" onclick="nextbutton()">❯</button>
+
+            <li style="text-align:center" id="month">
+                August<br>
+                <span style="font-size:18px">2016</span>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+    </ul>
+
+    <ul class="days">
+      <li>1</li>
+      <li>2</li>
+      <li><span class="active">3</span></li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li>18</li>
+      <li>19</li>
+      <li>20</li>
+      <li>21</li>
+      <li>22</li>
+      <li>23</li>
+      <li>24</li>
+      <li>25</li>
+      <li>26</li>
+      <li>27</li>
+      <li>28</li>
+      <li>29</li>
+      <li>30</li>
+      <li>31</li>
+    </ul>
 
     <div class="container">
      <div class="col-lg-12" id="content">
       <div class="res">
       <h2><strong>For more information..</strong></h2>
         <ul class="resource">
-          <div class="col-md-2"> <li><a href="https://www.higherscorestestprep.com/act-prep/" target="_blank">ACT Prep</a></li> </div>
-          <div class="col-md-2"> <li><a href="https://www.higherscorestestprep.com/new-sat/" target="_blank">SAT Prep</a></li> </div>
-          <div class="col-md-2"> <li><a href="https://www.khanacademy.org/test-prep/sat" target="_blank">Khan Academy</a></li> </div>
-          <div class="col-md-2"> <li><a href="https://www.hsalaredo.org/highschool/SAT-ACT%20Fact%20Sheet.pdf" target="_blank">SAT/ACT fact sheet</a></li> </div>
-          <div class="col-md-2"> <li><a href="https://collegereadiness.collegeboard.org/sat/register/dates-deadpnes" target="_blank">SAT Registration</a></li> </div>
-          <div class="col-md-2"> <li><a href="http://www.act.org/content/act/en/products-and-services/the-act.html" target="_blank">ACT Registration</a></li> </div>
-          <div class="col-md-2"> <li><a href="http://www.prepscholar.com/act/l/camp_online_orig_act?gclid=CjwKEAjwrIa9BRD5_dvqqazMrFESJACdv27GI69ITg5n3wQHWxvAbvIGSoAD9_F1jNx0Mwe9QvSlNxoCkErw_wcB" target="_blank">ACT prep course</a></li> </div>
+          <div> <li><a href="https://www.higherscorestestprep.com/act-prep/" target="_blank">ACT Prep</a></li> </div>
+          <div> <li><a href="https://www.higherscorestestprep.com/new-sat/" target="_blank">SAT Prep</a></li> </div>
+          <div> <li><a href="https://www.khanacademy.org/test-prep/sat" target="_blank">Khan Academy</a></li> </div>
+          <div> <li><a href="https://www.hsalaredo.org/highschool/SAT-ACT%20Fact%20Sheet.pdf" target="_blank">SAT/ACT fact sheet</a></li> </div>
+          <div> <li><a href="https://collegereadiness.collegeboard.org/sat/register/dates-deadpnes" target="_blank">SAT Registration</a></li> </div>
+          <div> <li><a href="http://www.act.org/content/act/en/products-and-services/the-act.html" target="_blank">ACT Registration</a></li> </div>
+          <div> <li><a href="http://www.prepscholar.com/act/l/camp_online_orig_act?gclid=CjwKEAjwrIa9BRD5_dvqqazMrFESJACdv27GI69ITg5n3wQHWxvAbvIGSoAD9_F1jNx0Mwe9QvSlNxoCkErw_wcB" target="_blank">ACT prep course</a></li> </div>
         </ul>
 
       <h3><ins>What is the SAT & ACT?</h3></ins>
@@ -110,30 +262,32 @@
         <p>Take the PLAN exam. This exam mirrors the ACT and provides a good practice experience to better prepare you for the ACT.</p>
 
       <h3><b><ins>SAT TIP SHEET</h3></b></ins>
+      <ul class="resource2">
         <li>Go to collegeboard.org, which contains alot of information and practice test.</li>
-         <ol type="1">
-          <li>PSAT:</li>
-          <p>Taking the PSAT as a Sophmore or Junior is a good way to practice and get feedback as you start planning for college and prepare for the SAT.</p>
-          <li>Study the test directions for each question type ahead of time:</li>
-          <p>Use the time you save to answer your questions, look over your answer sheet beforehand as well.</p>
-          <li>Answer easy questions first:</li>
-          <p>You earn just as many points for an easy question as you do for a hard question. Questions of the same type are grouped together.</p>
-          <li>Know how the test is scored:</li>
-          <p> On the multiple-choice questions, you earn one point for each correct answer and lose a fraction of a point for a wrong answer, but you don’t gain or lose points if you do not answer a question. You don’t have to answer every question correctly.</p>
-          <li>Guess Smart:</li>
-          <p>If you can rule out one or more answer choices for a multiple-choice question as definitely wrong,your chances of guessing the right answer improve. For math questions without answer choices, fill in your best guess since no points are subtracted for wrong answers as they are in all the other question types.</p>
-        </ol>
+           <ol type="1">
+              <li>PSAT:</li>
+              <p>Taking the PSAT as a Sophmore or Junior is a good way to practice and get feedback as you start planning for college and prepare for the SAT.</p>
+              <li>Study the test directions for each question type ahead of time:</li>
+              <p>Use the time you save to answer your questions, look over your answer sheet beforehand as well.</p>
+              <li>Answer easy questions first:</li>
+              <p>You earn just as many points for an easy question as you do for a hard question. Questions of the same type are grouped together.</p>
+              <li>Know how the test is scored:</li>
+              <p> On the multiple-choice questions, you earn one point for each correct answer and lose a fraction of a point for a wrong answer, but you don’t gain or lose points if you do not answer a question. You don’t have to answer every question correctly.</p>
+              <li>Guess Smart:</li>
+              <p>If you can rule out one or more answer choices for a multiple-choice question as definitely wrong,your chances of guessing the right answer improve. For math questions without answer choices, fill in your best guess since no points are subtracted for wrong answers as they are in all the other question types.</p>
+          </ol>
         <li>Publications</li>
-          <ol type="1">
-            <li>Taking the SAT I:reasoning test</li>
-            <li>10 real SATs</li>
+          <ol  type="1">
+              <li>Taking the SAT I:reasoning test</li>
+              <li>10 real SATs</li>
           </ol>
         <li>Online resources</li>
           <ol type="1">
-            <li>Practice Questions</li>
-            <li>Mini-SAT</li>
-            <li>SAT prep packs</li>
+              <li>Practice Questions</li>
+              <li>Mini-SAT</li>
+              <li>SAT prep packs</li>
           </ol>
+      </ul>
       <h4><b><ins>Testing dates for SAT</ins></b></h4>
         <p><u>TEST DATE</u>:October 1,2016;   <u>DEADLINE</u>:September 1,2016;  <u>LATE REGISTRATION</u>:September 16,2016.</p>
         <p><u>TEST DATE</u>:November 5,2016;  <u>DEADLINE</u>:October 7,2016;    <u>LATE REGISTRATION</u>:October 21,2016.</p>
